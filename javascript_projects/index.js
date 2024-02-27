@@ -18,12 +18,29 @@ console.log(typeof age);
 */
  
 //consts
-const PI = 3.142
-let radius;
-let circumference;
+//const PI = 3.142
+//let radius;
+//let circumference;
 
-radius = window.prompt('Enter radius');
-radius = Number(radius);
+//radius = window.prompt('Enter radius');
+//radius = Number(radius);
 
-circumference = 2*PI*radius;
-console.log('the cirm is:', circumference);
+//circumference = 2*PI*radius;
+//console.log('the cirm is:', circumference);
+
+//math
+let x = 3.142;
+let y = 8;
+let z = 7;
+let maximum;
+let minimum;
+
+Math.round(x)
+Math.floor(x);
+Math.ceil(x);
+Math.pow(x, 3);
+Math.sqrt(x)
+Math.abs(x)
+maximum = Math.max(x,y,z);
+minimum = Math.min(x,y,z);
+console.log(x);
