@@ -29,7 +29,7 @@ console.log(typeof age);
 //console.log('the cirm is:', circumference);
 
 //math
-let x = 3.142;
+/*let x = 3.142;
 let y = 8;
 let z = 7;
 let maximum;
@@ -44,3 +44,33 @@ Math.abs(x)
 maximum = Math.max(x,y,z);
 minimum = Math.min(x,y,z);
 console.log(x);
+
+
+let a;
+let b;
+let c;
+
+a = window.prompt("enter side A");
+a=Number(a);
+
+b = window.prompt("enter side b");
+b=Number(b);
+
+c=Math.sqrt(Math.pow(a, 2)+ Math.pow(b,2));
+console.log('area is:', c);
+*/
+let a;
+let b;
+let c;
+
+document.getElementById("submitButton").onclick = function() {
+    a = window.prompt("enter side A");
+a=Number(a);
+
+b = window.prompt("enter side b");
+b=Number(b);
+
+c=Math.sqrt(Math.pow(a, 2)+ Math.pow(b,2));
+console.log('area is:', c);
+
+}
