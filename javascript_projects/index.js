@@ -58,7 +58,7 @@ b=Number(b);
 
 c=Math.sqrt(Math.pow(a, 2)+ Math.pow(b,2));
 console.log('area is:', c);
-*/
+
 let a;
 let b;
 let c;
@@ -74,3 +74,28 @@ c=Math.sqrt(Math.pow(a, 2)+ Math.pow(b,2));
 console.log('area is:', c);
 
 }
+let e;
+let f;
+let g;
+ e= window.prompt('enter side e')
+ e= Number(e)
+ f= windeow.prompt('enter side f')
+ f= Number(f);
+ g= Math.sqrt(Math.pow(e, 2) + Math(f,2));
+ console.log("the side of is : ", f);
+*/
+let a;
+let b;
+let c;
+
+document.getElementById("submitButton").onclick = function (){
+    a =document.getElementById("aTextBox").value;
+    a=Number(a);
+
+    b=document.getElementById("bTextBox").value;
+    b=Number(b);
+
+    c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+    document.getElementById('clabel').innerHTML = "side c:", + c
+};
