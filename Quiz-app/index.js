@@ -1,33 +1,33 @@
-const question = [
+const questions = [
     {
-        questions: "which is the largest city in kenya?",
+        question: "which is the largest city in kenya?",
         answers: [
-            {text: "kisumu", correct:false},
-            {text: "nairobi", correct:true},
-            {text: "nakuru", correct:false},
-            {text: "mombasa", correct:false},
+            {text: "kisumu", correct: false},
+            {text: "nairobi", correct: true},
+            {text: "nakuru", correct: false},
+            {text: "mombasa", correct: false},
         ]
     },
     {
-        questions: "which is the largest lake in kenya?",
+        question: "which is the largest lake in kenya?",
         answers: [
-            {text: "victoria", correct:true},
-            {text: "naivasha", correct:false},
-            {text: "nakuru", correct:false},
-            {text: "turkana", correct:false},
+            {text: "victoria", correct: true},
+            {text: "naivasha", correct: false},
+            {text: "nakuru", correct: false},
+            {text: "turkana", correct: false},
         ]
     },
     {
-        questions: "which is the largest petrol station in kenya?",
+        question: "which is the largest petrol station in kenya?",
         answers: [
-            {text: "sanchez", correct:false},
-            {text: "rubis", correct:false},
-            {text: "shell", correct:false},
-            {text: "total", correct:true},
+            {text: "sanchez", correct: false},
+            {text: "rubis", correct: false},
+            {text: "shell", correct: false},
+            {text: "total", correct: true},
         ]
     },
     {
-        questions: "which is the largest mountain in kenya?",
+        question: "which is the largest mountain in kenya?",
         answers: [
             {text: "elgon", correct:true},
             {text: "naivasha", correct:false},
@@ -56,10 +56,10 @@ function showQuestion(){
     resetState()
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1 ;
-    questionElement.innerHTML = questionNo + "."+currentQuestion.question;
+    questionElement.innerHTML = questionNo + "." + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
-        const button =document.getElementById("button");
+        const button =document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerButtons.appendChild(button);
@@ -99,6 +99,9 @@ function selectAnswer(e){
 
 function showScore() {
     resetState();
+    questionElement.innerHTML =`You score is ${score} out of ${questions.length}`
+    nextButton.innerHTML = "play again"
+    nextButton.style.display = "block"
 
 }
 function handleNextButton(){
